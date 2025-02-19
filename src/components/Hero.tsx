@@ -3,14 +3,14 @@ import { Download, Github, Linkedin, Mail } from 'lucide-react';
 
 export default function Hero() {
 
-  const handleDownloadCV = () => {
-    const link = document.createElement('a');
-    link.href = '/Resume.pdf';
-    link.download = 'Sricharan-resume.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+  // const handleDownloadCV = () => {
+  //   const link = document.createElement('a');
+  //   link.href = '/Resume.pdf';
+  //   link.download = 'Sricharan-resume.pdf';
+  //   document.body.appendChild(link);
+  //   link.click();
+  //   document.body.removeChild(link);
+  // };
 
   return (
     <section className="flex items-center justify-center min-h-screen text-white bg-gray-900">
@@ -55,7 +55,7 @@ export default function Hero() {
           </motion.div>
 
 
-          <motion.button
+          {/* <motion.button
             initial={{ y: 20, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.6 }}
@@ -66,7 +66,7 @@ export default function Hero() {
           >
             <Download size={20} />
             <span>Download CV</span>
-          </motion.button>
+          </motion.button> */}
 
 
         </motion.div>
