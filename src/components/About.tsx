@@ -6,7 +6,10 @@ const AboutMe: React.FC = () => {
       <div className="container mx-auto px-6 lg:px-20">
         <h2 className="mb-4 text-4xl font-bold text-center text-gray-800">About Me</h2>
         <div className="w-14 h-1 mx-auto bg-blue-600 rounded-full"></div>
-        <div className="flex flex-col lg:flex-row-reverse items-center justify-between gap-10">
+        
+        {/* Image on Top in Small Screens */}
+        <div className="flex flex-col-reverse lg:flex-row-reverse items-center justify-between gap-10">
+          
           {/* About Content */}
           <div className="w-full lg:w-2/3 text-center lg:text-left px-6">
             <p className="text-gray-700 leading-loose text-lg">
@@ -16,6 +19,7 @@ const AboutMe: React.FC = () => {
               I thrive in fast-paced environments where collaboration, adaptability, and continuous growth drive success.
               My goal is to contribute to projects that push boundaries, improve efficiency, and deliver seamless user experiences.
             </p>
+            
             {/* Soft Skills Section */}
             <div className="mt-8">
               <h3 className="text-xl font-semibold text-gray-800 mb-6">My Soft Skills</h3>
@@ -38,7 +42,8 @@ const AboutMe: React.FC = () => {
               </div>
             </div>
           </div>
-          {/* Image Section */}
+
+          {/* Image Section - On Top in Small Screens */}
           <div className="w-full lg:w-1/3 flex justify-center px-6">
             <div className="relative w-80 h-[28rem] sm:w-96 sm:h-[30rem] overflow-hidden">
               <img
@@ -48,6 +53,7 @@ const AboutMe: React.FC = () => {
               />
             </div>
           </div>
+
         </div>
       </div>
     </section>
