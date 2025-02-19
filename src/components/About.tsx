@@ -8,8 +8,8 @@ const AboutMe: React.FC = () => {
         <div className="w-14 h-1 mx-auto bg-blue-600 rounded-full"></div>
         
         {/* Image on Top in Small Screens */}
-        <div className="flex flex-col-reverse lg:flex-row-reverse items-center justify-between gap-10">
-          
+        <div className="flex flex-col-reverse lg:flex-row-reverse items-center justify-between gap-10 mt-4 lg:mt-0">
+
           {/* About Content */}
           <div className="w-full lg:w-2/3 text-center lg:text-left px-6">
             <p className="text-gray-700 leading-loose text-lg">
