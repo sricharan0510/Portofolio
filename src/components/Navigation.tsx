@@ -24,7 +24,7 @@ export default function Navigation() {
           <motion.span
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="text-xl font-bold text-gray-800"
+            className="text-2xl font-bold text-gray-800"
           >
             Sricharan
           </motion.span>
@@ -41,8 +41,8 @@ export default function Navigation() {
               >
                 <motion.a
                   href={item.href}
-                  className={`text-gray-600 transition-colors hover:text-blue-600 mb-2 ${
-                    active === item.href ? "text-blue-700 font-semibold" : ""
+                  className={`text-black-600 transition-colors hover:text-blue-600 mb-2 ${
+                    active === item.href ? "text-blue-700 font-bold" : ""
                   }`}
                   whileHover={{ y: -2 }}
                 >

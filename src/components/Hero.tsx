@@ -1,19 +1,12 @@
 import { motion } from 'framer-motion';
-import { Download, Github, Linkedin, Mail } from 'lucide-react';
+import { Github, Linkedin, Mail } from 'lucide-react';
 
 export default function Hero() {
-
-  // const handleDownloadCV = () => {
-  //   const link = document.createElement('a');
-  //   link.href = '/Resume.pdf';
-  //   link.download = 'Sricharan-resume.pdf';
-  //   document.body.appendChild(link);
-  //   link.click();
-  //   document.body.removeChild(link);
-  // };
-
   return (
-    <section className="flex items-center justify-center min-h-screen text-white bg-gray-900">
+    <section
+      className="flex items-center justify-center min-h-screen text-white bg-gray-900 bg-cover bg-center bg-no-repeat"
+      style={{ backgroundImage: "url('https://img.freepik.com/free-vector/modern-desktop-background-geometric-blue-design-vector_53876-135923.jpg')" }}
+    >
       <div className="container px-4 mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -35,7 +28,7 @@ export default function Hero() {
             transition={{ delay: 0.3 }}
             className="mb-8 text-2xl text-gray-300"
           >
-            Full Stack Developer | Competetive Programmer
+            Full Stack Developer | Competitive Programmer
           </motion.p>
           <motion.div
             initial={{ opacity: 0 }}
@@ -53,22 +46,6 @@ export default function Hero() {
               <Mail size={24} />
             </a>
           </motion.div>
-
-
-          {/* <motion.button
-            initial={{ y: 20, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.6 }}
-            whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
-            whileTap={{ scale: 0.95 }}
-            onClick={handleDownloadCV}
-            className="flex items-center justify-center px-5 py-3 mx-auto mt-8 space-x-2 text-white transition-all duration-200 bg-[#1D4ED8] border-2 border-[#1D4ED8] hover:bg-transparent"
-          >
-            <Download size={20} />
-            <span>Download CV</span>
-          </motion.button> */}
-
-
         </motion.div>
       </div>
     </section>
