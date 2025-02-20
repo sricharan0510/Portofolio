@@ -1,28 +1,75 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const AboutMe: React.FC = () => {
+  const sectionRef = useRef(null);
+  const imageRef = useRef(null);
+  const contentRef = useRef(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.from(imageRef.current, {
+        x: -200, 
+        opacity: 0, 
+        duration: 1.5, 
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 80%",
+        },
+      });
+
+      gsap.from(contentRef.current, {
+        x: 200, 
+        opacity: 0, 
+        duration: 1.5, 
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 80%",
+        },
+      });
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <section id="about-section" className="relative py-16 flex items-center min-h-screen">
+    <section
+      id="about-section"
+      ref={sectionRef}
+      className="relative py-16 flex items-center min-h-screen overflow-hidden"
+    >
       <div className="container mx-auto px-6 lg:px-20">
-        <h2 className="mb-4 text-4xl font-bold text-center text-gray-800">About Me</h2>
+        <h2 className="mb-4 text-4xl font-bold text-center text-gray-800">
+          About Me
+        </h2>
         <div className="w-14 h-1 mx-auto bg-blue-600 rounded-full"></div>
-        
+
         {/* Image on Top in Small Screens */}
         <div className="flex flex-col-reverse lg:flex-row-reverse items-center justify-between gap-10 mt-4 lg:mt-0">
-
           {/* About Content */}
-          <div className="w-full lg:w-2/3 text-center lg:text-left px-6">
+          <div ref={contentRef} className="w-full lg:w-2/3 text-center lg:text-left px-6">
             <p className="text-gray-700 leading-loose text-lg">
-              I am passionate about building meaningful and efficient digital experiences.
-              With a strong eye for detail and problem-solving, I love crafting intuitive solutions that enhance user interaction and functionality.
-              Every project I work on is an opportunity to learn, improve, and create something impactful.
-              I thrive in fast-paced environments where collaboration, adaptability, and continuous growth drive success.
-              My goal is to contribute to projects that push boundaries, improve efficiency, and deliver seamless user experiences.
+              I am passionate about building meaningful and efficient digital
+              experiences. With a strong eye for detail and problem-solving, I
+              love crafting intuitive solutions that enhance user interaction
+              and functionality. Every project I work on is an opportunity to
+              learn, improve, and create something impactful. I thrive in
+              fast-paced environments where collaboration, adaptability, and
+              continuous growth drive success. My goal is to contribute to
+              projects that push boundaries, improve efficiency, and deliver
+              seamless user experiences.
             </p>
-            
+
             {/* Soft Skills Section */}
             <div className="mt-8">
-              <h3 className="text-xl font-semibold text-gray-800 mb-6">My Soft Skills</h3>
+              <h3 className="text-xl font-semibold text-gray-800 mb-6">
+                My Soft Skills
+              </h3>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                 {[
                   "Communication",
@@ -44,16 +91,15 @@ const AboutMe: React.FC = () => {
           </div>
 
           {/* Image Section - On Top in Small Screens */}
-          <div className="w-full lg:w-1/3 flex justify-center px-6">
+          <div ref={imageRef} className="w-full lg:w-1/3 flex justify-center px-6">
             <div className="relative w-80 h-[28rem] sm:w-96 sm:h-[30rem] overflow-hidden">
               <img
-                src="./MyPic.png"
+                src="./NewPic.png"
                 alt="My Picture"
                 className="w-full h-full object-cover"
               />
             </div>
           </div>
-
         </div>
       </div>
     </section>

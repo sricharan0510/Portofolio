@@ -61,22 +61,6 @@ export default function Contact() {
                 <MapPin className="text-blue-400" />
                 <span className="text-sm font-medium">Telangana, INDIA</span>
               </div>
-              {/* <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.6 }}
-                className="flex justify-center space-x-6"
-              >
-                <a target='_blank' href="https://github.com/sricharan0510" className="text-gray-300 transition-colors hover:text-white">
-                  <Github size={24} />
-                </a>
-                <a target='_blank' href="https://www.linkedin.com/in/sricharan-illandula-0a61b22a4/" className="text-gray-300 transition-colors hover:text-white">
-                  <Linkedin size={24} />
-                </a>
-                <a target='_blank' href="mailto:sricharan0504@gmail.com" className="text-gray-300 transition-colors hover:text-white">
-                  <Mail size={24} />
-                </a>
-              </motion.div> */}
             </div>
           </div>
 
@@ -137,6 +121,15 @@ export default function Contact() {
             </form>
           </motion.div>
         </div>
+
+        {/* Line Separator */}
+        <div className="mt-12 border-t border-gray-700"></div>
+
+        {/* Copyright Statement */}
+        <p className="mt-6 text-center text-xl text-gray-400">
+          © {new Date().getFullYear()} Sricharan Illandula. All rights reserved.
+        </p>
+
       </div>
     </section>
   );
