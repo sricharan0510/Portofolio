@@ -1,7 +1,16 @@
 import { motion } from 'framer-motion';
-import { Github, Linkedin, Mail } from 'lucide-react';
+import { Download, Github, Linkedin, Mail } from 'lucide-react';
+import resume from '/Resume.pdf'
 
 export default function Hero() {
+  const handleDownloadCV = () => {
+    const link = document.createElement('a');
+    link.href = resume;
+    link.download = 'Sricharan-resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   return (
     <section
       className="flex items-center justify-center min-h-screen text-white bg-gray-900 bg-cover bg-center bg-no-repeat"
@@ -46,6 +55,18 @@ export default function Hero() {
               <Mail size={24} />
             </a>
           </motion.div>
+          <motion.button
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.6 }}
+            whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+            whileTap={{ scale: 0.95 }}
+            onClick={handleDownloadCV}
+            className="flex items-center justify-center px-5 py-3 mx-auto mt-8 space-x-2 text-white transition-all duration-200 bg-[#1D4ED8] border-2 border-[#1D4ED8] hover:bg-transparent"
+          >
+            <Download size={20} />
+            <span>Download CV</span>
+          </motion.button>
         </motion.div>
       </div>
     </section>
