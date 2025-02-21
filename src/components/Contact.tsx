@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { motion } from 'framer-motion';
-import { Mail, Phone, MapPin, Send, Github, Linkedin } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Github, Linkedin, User } from 'lucide-react';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -42,25 +42,43 @@ export default function Contact() {
   };
 
   return (
-    <section className="py-20 text-white bg-gray-900">
+    <section className="py-10 text-white bg-gray-900">
       <div className="container px-4 mx-auto">
-        <h2 className="mb-12 text-4xl font-bold text-center">Contact Me</h2>
+        <h2 className="mb-14 text-4xl font-bold text-center mt-7">Contact Me</h2>
         <div className="grid max-w-6xl grid-cols-1 gap-12 mx-auto md:grid-cols-2">
           <div>
-            <h3 className="mb-6 text-2xl font-bold">Get in Touch</h3>
-            <div className="space-y-6">
-              <div className="flex items-center space-x-4">
-                <Mail className="text-blue-400" />
-                <span className="text-sm font-medium">sricharan0504@gmail.com</span>
+            <h3 className="mb-8 text-2xl font-bold">Get in Touch</h3>
+            <div>
+              <div  className="space-y-6 mb-10">
+                <div className="flex items-center space-x-4">
+                  <User className="text-blue-400" />
+                  <span className="text-xl font-medium">Sricharan Illandula</span>
+                </div>
+                <div className="flex items-center space-x-4">
+                  <Phone className="text-blue-400" />
+                  <span className="text-xl font-medium">+91 8519836671</span>
+                </div>
+                <div className="flex items-center space-x-4">
+                  <MapPin className="text-blue-400" />
+                  <span className="text-xl font-medium">Telangana, INDIA</span>
+                </div>
               </div>
-              <div className="flex items-center space-x-4">
-                <Phone className="text-blue-400" />
-                <span className="text-sm font-medium">+91 851-983-6671</span>
-              </div>
-              <div className="flex items-center space-x-4">
-                <MapPin className="text-blue-400" />
-                <span className="text-sm font-medium">Telangana, INDIA</span>
-              </div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.6 }}
+                className="flex space-x-6"
+              >
+                <a target='_blank' href="https://github.com/sricharan0510" className="text-gray-300 transition-colors hover:text-white">
+                  <Github size={24} />
+                </a>
+                <a target='_blank' href="https://www.linkedin.com/in/sricharan-illandula-0a61b22a4/" className="text-gray-300 transition-colors hover:text-white">
+                  <Linkedin size={24} />
+                </a>
+                <a target='_blank' href="mailto:sricharan0504@gmail.com" className="text-gray-300 transition-colors hover:text-white">
+                  <Mail size={24} />
+                </a>
+              </motion.div>
             </div>
           </div>
 
@@ -120,6 +138,7 @@ export default function Contact() {
               )}
             </form>
           </motion.div>
+
         </div>
 
         {/* Line Separator */}
