@@ -49,7 +49,7 @@ export default function Contact() {
           <div>
             <h3 className="mb-8 text-2xl font-bold">Get in Touch</h3>
             <div>
-              <div  className="space-y-6 mb-10">
+              <div className="space-y-6 mb-10">
                 <div className="flex items-center space-x-4">
                   <User className="text-blue-400" />
                   <span className="text-xl font-medium">Sricharan Illandula</span>
@@ -63,25 +63,12 @@ export default function Contact() {
                   <span className="text-xl font-medium">Telangana, INDIA</span>
                 </div>
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
+
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.6 }}
                 className="flex space-x-6"
-=======
-=======
->>>>>>> parent of 9cabfcb (Modified Contact)
-              {/* <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.6 }}
-                className="flex justify-center space-x-6"
-<<<<<<< HEAD
->>>>>>> parent of 9cabfcb (Modified Contact)
-=======
->>>>>>> parent of 9cabfcb (Modified Contact)
               >
                 <a target='_blank' href="https://github.com/sricharan0510" className="text-gray-300 transition-colors hover:text-white">
                   <Github size={24} />
@@ -92,15 +79,7 @@ export default function Contact() {
                 <a target='_blank' href="mailto:sricharan0504@gmail.com" className="text-gray-300 transition-colors hover:text-white">
                   <Mail size={24} />
                 </a>
-<<<<<<< HEAD
-<<<<<<< HEAD
               </motion.div>
-=======
-              </motion.div> */}
->>>>>>> parent of 9cabfcb (Modified Contact)
-=======
-              </motion.div> */}
->>>>>>> parent of 9cabfcb (Modified Contact)
             </div>
           </div>
 
@@ -160,7 +139,6 @@ export default function Contact() {
               )}
             </form>
           </motion.div>
-
         </div>
       </div>
     </section>
