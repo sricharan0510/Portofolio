@@ -64,17 +64,23 @@ export default function Contact() {
                 </div>
               </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.6 }}
                 className="flex space-x-6"
 =======
+=======
+>>>>>>> parent of 9cabfcb (Modified Contact)
               {/* <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.6 }}
                 className="flex justify-center space-x-6"
+<<<<<<< HEAD
+>>>>>>> parent of 9cabfcb (Modified Contact)
+=======
 >>>>>>> parent of 9cabfcb (Modified Contact)
               >
                 <a target='_blank' href="https://github.com/sricharan0510" className="text-gray-300 transition-colors hover:text-white">
@@ -87,7 +93,11 @@ export default function Contact() {
                   <Mail size={24} />
                 </a>
 <<<<<<< HEAD
+<<<<<<< HEAD
               </motion.div>
+=======
+              </motion.div> */}
+>>>>>>> parent of 9cabfcb (Modified Contact)
 =======
               </motion.div> */}
 >>>>>>> parent of 9cabfcb (Modified Contact)
