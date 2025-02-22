@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 
@@ -68,25 +68,21 @@ const projects = [
       features: ['Filtering', 'CRUD Student', 'Dashboard'],
       link: 'https://github.com/KondaveeteChennakesava?tab=repositories',
     },
-  }
-]
+  },
+];
 
 export default function Projects() {
   const [selectedProject, setSelectedProject] = useState<typeof projects[0] | null>(null);
-  const sectionRef = useRef(null);
 
   return (
-    <section ref={sectionRef} className="py-20 bg-gray-50">
+    <section className="py-20 bg-gray-50">
       <div className="container px-4 mx-auto">
         <h2 className="mb-4 text-4xl font-bold text-center">Projects</h2>
         <div className="mb-12 w-20 h-1 mx-auto bg-blue-600 rounded-full"></div>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <motion.div
               key={project.id}
-              initial={{ y: 50, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.6, delay: index * 0.15 }}
               whileHover={{ y: -10 }}
               className="overflow-hidden bg-white rounded-lg shadow-xl cursor-pointer"
               onClick={() => setSelectedProject(project)}
@@ -151,22 +147,23 @@ export default function Projects() {
                   <div className="mt-6">
                     <h4 className="mb-4 font-bold">Key Features</h4>
                     <div className="flex flex-wrap justify-center gap-3">
-                      {selectedProject.details.features.map((feature) => (
+                      {selectedProject.details.features.map((tech) => (
                         <span
-                          key={feature}
+                          key={tech}
                           className="px-4 py-2 text-sm text-blue-800 bg-blue-100 rounded-full"
                         >
-                          {feature}
+                          {tech}
                         </span>
                       ))}
                     </div>
                   </div>
                 </div>
+
               </motion.div>
             </motion.div>
           )}
         </AnimatePresence>
       </div>
-    </section>
+    </section >
   );
 }

@@ -10,7 +10,7 @@ const experiences = [
     description: 'Led development of enterprise applications using React and Node.js',
   },
   {
-    title: 'FrontEnd Developer',
+    title: 'Basic FrontEnd Developer',
     company: 'CodSoft',
     date: 'Nov, 2023 - Dec, 2023',
     description: 'Deep dived in to Html and CSS',

@@ -63,11 +63,19 @@ export default function Contact() {
                   <span className="text-xl font-medium">Telangana, INDIA</span>
                 </div>
               </div>
+<<<<<<< HEAD
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.6 }}
                 className="flex space-x-6"
+=======
+              {/* <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.6 }}
+                className="flex justify-center space-x-6"
+>>>>>>> parent of 9cabfcb (Modified Contact)
               >
                 <a target='_blank' href="https://github.com/sricharan0510" className="text-gray-300 transition-colors hover:text-white">
                   <Github size={24} />
@@ -78,7 +86,11 @@ export default function Contact() {
                 <a target='_blank' href="mailto:sricharan0504@gmail.com" className="text-gray-300 transition-colors hover:text-white">
                   <Mail size={24} />
                 </a>
+<<<<<<< HEAD
               </motion.div>
+=======
+              </motion.div> */}
+>>>>>>> parent of 9cabfcb (Modified Contact)
             </div>
           </div>
 
@@ -140,15 +152,6 @@ export default function Contact() {
           </motion.div>
 
         </div>
-
-        {/* Line Separator */}
-        <div className="mt-12 border-t border-gray-700"></div>
-
-        {/* Copyright Statement */}
-        <p className="mt-6 text-center text-xl text-gray-400">
-          © {new Date().getFullYear()} Sricharan Illandula. All rights reserved.
-        </p>
-
       </div>
     </section>
   );

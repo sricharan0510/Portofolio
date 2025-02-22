@@ -62,7 +62,7 @@ export default function Hero() {
             whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
             whileTap={{ scale: 0.95 }}
             onClick={handleDownloadCV}
-            className="flex items-center justify-center px-5 py-3 mx-auto mt-8 space-x-2 text-white transition-all duration-200 bg-transparent border-2 border-[#1D4ED8] hover:bg-transparent"
+            className="flex items-center justify-center px-5 py-3 mx-auto mt-8 space-x-2 text-white transition-all duration-200 bg-[#1D4ED8] border-2 border-[#1D4ED8] hover:bg-transparent"
           >
             <Download size={20} />
             <span>Download CV</span>
